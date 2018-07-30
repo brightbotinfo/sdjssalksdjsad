@@ -222,8 +222,8 @@ client.on("message", message => {
       .then(connnection => {
         let stream = yt('https://www.youtube.com/watch?v=tuYP5JktEn0', {audioonly: true});
         const dispatcher = connnection.playStream(stream);
-  }
         });
+  }
   
   
                                       if (message.content === q10 ) {
