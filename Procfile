@@ -1,1 +1,1 @@
-worker: quran.js
+worker: node quran.js
