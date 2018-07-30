@@ -1,1 +1,1 @@
-worker: node quran.js
+worker: node bot.js
