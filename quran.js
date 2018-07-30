@@ -2,7 +2,43 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const yt = require('ytdl-core');
 
-const prefix = '*'
+const prefix = '.'
+
+
+const developers = [""]
+client.on('message', message => {
+    var argresult = message.content.split(` `).slice(1).join(' ');
+      if (!developers.includes(message.author.id)) return;
+      
+  if (message.content.startsWith(prefix + 'ply')) {
+    client.user.setGame(argresult);
+      message.channel.send(`**✅   ${argresult}**`)
+  } else 
+     if (message.content === (prefix + "leave")) {
+    message.guild.leave();        
+  } else  
+  if (message.content.startsWith(prefix + 'wt')) {
+  client.user.setActivity(argresult, {type:'WATCHING'});
+      message.channel.send(`**✅   ${argresult}**`)
+  } else 
+  if (message.content.startsWith(prefix + 'ls')) {
+  client.user.setActivity(argresult , {type:'LISTENING'});
+      message.channel.send(`**✅   ${argresult}**`)
+  } else 
+  if (message.content.startsWith(prefix + 'st')) {
+    client.user.setGame(argresult, "https://www.twitch.tv/idk");
+      message.channel.send(`**✅**`)
+  }
+  if (message.content.startsWith(prefix + 'setname')) {
+  client.user.setUsername(argresult).then
+      message.channel.send(`Changing The Name To ..**${argresult}** `)
+} else
+if (message.content.startsWith(prefix + 'setavatar')) {
+  client.user.setAvatar(argresult);
+    message.channel.send(`Changing The Avatar To :**${argresult}** `);
+}
+});
+
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
@@ -26,13 +62,31 @@ function hasRole(mem, role) {
   }
   
 var servers = {};
-var q1 = "*quran 1"
-var q2 = "*quran 2"
-var q3 = "*quran 3"
-var q4 = "*quran 4"
-var q5 = "*quran 5"
-var q6 = "*quran 6"
-var q7 = "*quran 7"
+var q1 = "-quran 1"
+var q2 = "-quran 2"
+var q3 = "-quran 3"
+var q4 = "-quran 4"
+var q5 = "-quran 5"
+var q6 = "-quran 6"
+var q7 = "-quran 7"
+var q7 = "-quran 8"
+var q7 = "-quran 9"
+var q7 = "-quran 10"
+var q7 = "-quran 11"
+var q7 = "-quran 12"
+var q7 = "-quran 13"
+var q7 = "-quran 14"
+var q7 = "-quran 15"
+var q7 = "-quran 16"
+var q7 = "-quran 17"
+var q7 = "-quran 18"
+var q7 = "-quran 19"
+var q7 = "-quran 20"
+var q7 = "-quran 21"
+var q7 = "-quran 22"
+var q7 = "-quran 23"
+var q7 = "-quran 24"
+var q7 = "-quran 25"
 
 
 
@@ -65,7 +119,7 @@ client.on("message", message => {
     }
     voiceChannel.join()
       .then(connnection => {
-        let stream = yt('https://www.youtube.com/watch?v=V4b9f9BQTKI', {audioonly: true});
+        let stream = yt('https://www.youtube.com/watch?v=E1Y0pDXNPu8', {audioonly: true});
         const dispatcher = connnection.playStream(stream);
       });
   }
@@ -78,7 +132,7 @@ client.on("message", message => {
     }
     voiceChannel.join()
       .then(connnection => {
-        let stream = yt('https://youtu.be/0m02xNtR8gA', {audioonly: true});
+        let stream = yt('https://www.youtube.com/watch?v=IEC8wi6wpGg', {audioonly: true});
         const dispatcher = connnection.playStream(stream);
       });
   }
@@ -91,11 +145,11 @@ client.on("message", message => {
     }
     voiceChannel.join()
       .then(connnection => {
-        let stream = yt('https://www.youtube.com/watch?v=4JvY-MccxNk', {audioonly: true});
+        let stream = yt('https://www.youtube.com/watch?v=cjmh_-4VY9I', {audioonly: true});
         const dispatcher = connnection.playStream(stream);
       });
   }
-  
+
                             if (message.content === q4 ) {
                   message.react('🔊')
     const voiceChannel = message.member.voiceChannel;
@@ -104,7 +158,7 @@ client.on("message", message => {
     }
     voiceChannel.join()
       .then(connnection => {
-        let stream = yt('https://www.youtube.com/watch?v=Ktync4j_nmA', {audioonly: true});
+        let stream = yt('https://www.youtube.com/watch?v=L0s4ij88LTU', {audioonly: true});
         const dispatcher = connnection.playStream(stream);
         });
   }
@@ -116,7 +170,7 @@ client.on("message", message => {
     }
     voiceChannel.join()
       .then(connnection => {
-        let stream = yt('https://www.youtube.com/watch?v=JavxHrNSZlg', {audioonly: true});
+        let stream = yt('https://www.youtube.com/watch?v=Je1QLnXRGjE', {audioonly: true});
         const dispatcher = connnection.playStream(stream);
         });
   }
@@ -128,7 +182,7 @@ client.on("message", message => {
     }
     voiceChannel.join()
       .then(connnection => {
-        let stream = yt('https://www.youtube.com/watch?v=WYT0pQne-7w', {audioonly: true});
+        let stream = yt('https://www.youtube.com/watch?v=2Q--P6Fxyl0', {audioonly: true});
         const dispatcher = connnection.playStream(stream);
         });
   }
@@ -140,90 +194,523 @@ client.on("message", message => {
     }
     voiceChannel.join()
       .then(connnection => {
-        let stream = yt('https://www.youtube.com/watch?v=3XV0ejeQG_M', {audioonly: true});
+        let stream = yt('https://www.youtube.com/watch?v=yM-nVWU0wfU', {audioonly: true});
         const dispatcher = connnection.playStream(stream);
         });
   }
 
+                                      if (message.content === q8 ) {
+                  message.react('🔊')
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply(`يرجى أن تكون في قناة صوتيه أولا!`);
+    }
+    voiceChannel.join()
+      .then(connnection => {
+        let stream = yt('https://www.youtube.com/watch?v=fw2ByWafkV0', {audioonly: true});
+        const dispatcher = connnection.playStream(stream);
+        });
+  }
   
+                                      if (message.content === q9 ) {
+                  message.react('🔊')
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply(`يرجى أن تكون في قناة صوتيه أولا!`);
+    }
+    voiceChannel.join()
+      .then(connnection => {
+        let stream = yt('https://www.youtube.com/watch?v=tuYP5JktEn0', {audioonly: true});
+        const dispatcher = connnection.playStream(stream);
+  }
+        });
+  
+  
+                                      if (message.content === q10 ) {
+                  message.react('🔊')
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply(`يرجى أن تكون في قناة صوتيه أولا!`);
+    }
+    voiceChannel.join()
+      .then(connnection => {
+        let stream = yt('https://www.youtube.com/watch?v=RGnYiavNAJI', {audioonly: true});
+        const dispatcher = connnection.playStream(stream);
+        });
+  }
+
+                                      if (message.content === q11 ) {
+                  message.react('🔊')
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply(`يرجى أن تكون في قناة صوتيه أولا!`);
+    }
+    voiceChannel.join()
+      .then(connnection => {
+        let stream = yt('https://www.youtube.com/watch?v=W7KqMe44aGo', {audioonly: true});
+        const dispatcher = connnection.playStream(stream);
+        });
+  }
+  
+                                      if (message.content === q12 ) {
+                  message.react('🔊')
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply(`يرجى أن تكون في قناة صوتيه أولا!`);
+    }
+    voiceChannel.join()
+      .then(connnection => {
+        let stream = yt('https://www.youtube.com/watch?v=hXVqZRX9FUM', {audioonly: true});
+        const dispatcher = connnection.playStream(stream);
+        });
+  }
+  
+                                      if (message.content === q13 ) {
+                  message.react('🔊')
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply(`يرجى أن تكون في قناة صوتيه أولا!`);
+    }
+    voiceChannel.join()
+      .then(connnection => {
+        let stream = yt('https://www.youtube.com/watch?v=Up4iDBOjGU8', {audioonly: true});
+        const dispatcher = connnection.playStream(stream);
+        });
+  }
+  
+                                      if (message.content === q14 ) {
+                  message.react('🔊')
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply(`يرجى أن تكون في قناة صوتيه أولا!`);
+    }
+    voiceChannel.join()
+      .then(connnection => {
+        let stream = yt('https://www.youtube.com/watch?v=YwClCEV1AWA', {audioonly: true});
+        const dispatcher = connnection.playStream(stream);
+        });
+  }
+  
+                                      if (message.content === q15 ) {
+                  message.react('🔊')
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply(`يرجى أن تكون في قناة صوتيه أولا!`);
+    }
+    voiceChannel.join()
+      .then(connnection => {
+        let stream = yt('https://www.youtube.com/watch?v=20-hBBasCGE', {audioonly: true});
+        const dispatcher = connnection.playStream(stream);
+        });
+  }
+  
+                                      if (message.content === q16 ) {
+                  message.react('🔊')
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply(`يرجى أن تكون في قناة صوتيه أولا!`);
+    }
+    voiceChannel.join()
+      .then(connnection => {
+        let stream = yt('https://www.youtube.com/watch?v=E4dbht9oza4', {audioonly: true});
+        const dispatcher = connnection.playStream(stream);
+        });
+  }
+
+                                      if (message.content === q17 ) {
+                  message.react('🔊')
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply(`يرجى أن تكون في قناة صوتيه أولا!`);
+    }
+    voiceChannel.join()
+      .then(connnection => {
+        let stream = yt('https://www.youtube.com/watch?v=9QhMMkQ_VSg', {audioonly: true});
+        const dispatcher = connnection.playStream(stream);
+        });
+  }
+  
+                                      if (message.content === q18 ) {
+                  message.react('🔊')
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply(`يرجى أن تكون في قناة صوتيه أولا!`);
+    }
+    voiceChannel.join()
+      .then(connnection => {
+        let stream = yt('https://www.youtube.com/watch?v=UerpNxFxg0w', {audioonly: true});
+        const dispatcher = connnection.playStream(stream);
+        });
+  }
+  
+                                      if (message.content === q19 ) {
+                  message.react('🔊')
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply(`يرجى أن تكون في قناة صوتيه أولا!`);
+    }
+    voiceChannel.join()
+      .then(connnection => {
+        let stream = yt('https://www.youtube.com/watch?v=-ulcJ6m0euU', {audioonly: true});
+        const dispatcher = connnection.playStream(stream);
+        });
+  }
+  
+                                      if (message.content === q20 ) {
+                  message.react('🔊')
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply(`يرجى أن تكون في قناة صوتيه أولا!`);
+    }
+    voiceChannel.join()
+      .then(connnection => {
+        let stream = yt('https://www.youtube.com/watch?v=MMYT9P_OZUo', {audioonly: true});
+        const dispatcher = connnection.playStream(stream);
+        });
+  }
+  
+                                      if (message.content === q21 ) {
+                  message.react('🔊')
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply(`يرجى أن تكون في قناة صوتيه أولا!`);
+    }
+    voiceChannel.join()
+      .then(connnection => {
+        let stream = yt('https://www.youtube.com/watch?v=5OERHMfuI7E', {audioonly: true});
+        const dispatcher = connnection.playStream(stream);
+        });
+  }
+  
+                                      if (message.content === q22 ) {
+                  message.react('🔊')
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply(`يرجى أن تكون في قناة صوتيه أولا!`);
+    }
+    voiceChannel.join()
+      .then(connnection => {
+        let stream = yt('https://www.youtube.com/watch?v=VMSWdncvHqo', {audioonly: true});
+        const dispatcher = connnection.playStream(stream);
+        });
+  }
+  
+                                      if (message.content === q23 ) {
+                  message.react('🔊')
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply(`يرجى أن تكون في قناة صوتيه أولا!`);
+    }
+    voiceChannel.join()
+      .then(connnection => {
+        let stream = yt('https://www.youtube.com/watch?v=JrNFbjseBcg', {audioonly: true});
+        const dispatcher = connnection.playStream(stream);
+        });
+  }
+  
+                                      if (message.content === q24 ) {
+                  message.react('🔊')
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply(`يرجى أن تكون في قناة صوتيه أولا!`);
+    }
+    voiceChannel.join()
+      .then(connnection => {
+        let stream = yt('https://www.youtube.com/watch?v=9CN-31h_wK4', {audioonly: true});
+        const dispatcher = connnection.playStream(stream);
+        });
+  }
+  
+                                      if (message.content === q25 ) {
+                  message.react('🔊')
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply(`يرجى أن تكون في قناة صوتيه أولا!`);
+    }
+    voiceChannel.join()
+      .then(connnection => {
+        let stream = yt('https://www.youtube.com/watch?v=vSOl00Y-WDo', {audioonly: true});
+        const dispatcher = connnection.playStream(stream);
+        });
+  }
+  
+ 
   if(message.content === "*stop" ) {
                 var servers = {};
 
             if (message.guild.voiceConnection) message.guild.voiceConnection.disconnect();
   
   }
- 
- if(message.content === "*help") {
-   message.channel.send(` QuranBot
-● ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ● 
-     🕋اوامر البوت 🕋
-اذكار: يعرض لك الاذكار
- 
-● ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ●
-        **اوامر تشغيل القران**  
-:mosque: *quran 1  |  القران الكريم كامل بصوت الشيخ عبدالباسط عبدالصمد
-:mosque: *quran 2 | سورة البقرة كاملة - القارئ الحاج ميثم التمار (QURAN)
-:mosque: *quran 3 | القرآن الكريم كامل بصوت الشيخ عبد الرحمن السديس وسعود الشريم
-:mosque: *quran 4 | القرآن الكريم كامل بصوت الشيخ المعيقلي
-:mosque: *quran 5 |  سورة البقرة بصوت وتلاوة يخشع لها الحجر بدل القلب (الشيخ اسلام صبحي
-:mosque: *quran 6 | الشيخ ياسر الدوسري القرآن الكريم كامل
-:mosque: *quran 7 | القرآن الكريم كاملا بصوت الشيخ بندر بليلة
-:mosque: *stop |  لـ أيقاف تشغيل البوت
-● ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ●
- `)
- }
- 
-       
-}); 
+  
+
+client.on('message' , message => {
+  
+if (message.content.startsWith("-report")) {
+      if (message.author.bot) return;
+            if (!message.channel.guild) return;
+            let args = message.content.split(" ").slice(1).join(" ");
+
+                var xsatt = new Discord.RichEmbed()
+                .addField('** الـسيرفر**', `${message.guild.name}`,true)
+            .addField(' **الـمرسل **', `${message.author.username}#${message.author.discriminator}`,true)
+            .addField(' **الرسالة** ', args)
+              .setThumbnail(message.guild.iconURL)
+              .setColor('RANDOM')
+              client.users.get("370828320910213131").send({embed: xsatt});
+
+            let embed = new Discord.RichEmbed()
+               .setAuthor(message.author.username, message.author.avatarURL)
+               .setColor("RANDOM")
+               .setDescription(' ✅ | **شكراً لك عزيزي , لقد تم ارسال رسالتك لصاحب البوت**')
+               .setThumbnail(message.author.avatarURL)
 
 
-var adkar = [
-  '**اذكار  | **اللَّهُمَّ اكْفِنِي بِحَلَالِكَ عَنْ حَرَامِكَ وَأَغْنِنِي بِفَضْلِكَ عَمَّنْ سِوَاكَ.',
-  '**اذكار  |  **اللَّهُمَّ إِنِّي أَسْأَلُكَ الْهُدَى وَالتُّقَى وَالْعَفَافَ وَالْغِنَى. ',
-  '**اذكار  ‏|  **اللَّهُمَّ اغْفِرْ لِي ذَنْبِي كُلَّهُ، دِقَّهُ، وَجِلَّهُ، وَأَوَّلَهُ، وَآخِرَهُ، وَعَلَانِيَتَهُ، وَسِرَّهُ. ',
-  '**‏اذكار  |  **أستغفر الله .',
-  '**‏اذكار  | **الْلَّهُ أَكْبَرُ',
-  '**‏اذكار  |  **لَا إِلَهَ إِلَّا اللَّهُ',
-  '**اذكار  |  **الل��َهُمّ�� صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ , وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ , اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ.',
-  '**اذكار  |  **سُبْحَانَ الْلَّهِ، وَالْحَمْدُ لِلَّهِ، وَلَا إِلَهَ إِلَّا الْلَّهُ، وَالْلَّهُ أَكْبَرُ',
-  '**اذكار  | **لَا إلَه إلّا اللهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلُّ شَيْءِ قَدِيرِ.',
-  '**اذكار  | **أسْتَغْفِرُ اللهَ وَأتُوبُ إلَيْهِ',
-  '**‏اذكار  | **سُبْحـانَ اللهِ وَبِحَمْـدِهِ. ',
-  '‏**اذكار**|  لَا إلَه إلّا اللهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءِ قَدِيرِ.',
-  '**اذكار  ‏|   **اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْمًا نَافِعًا، وَرِزْقًا طَيِّبًا، وَعَمَلًا مُتَقَبَّلًا.',
-  '**اذكار  | ‏ **يَا رَبِّ , لَكَ الْحَمْدُ كَمَا يَنْبَغِي لِجَلَالِ وَجْهِكَ , وَلِعَظِيمِ سُلْطَانِكَ.',
-  'اذكار    |  **أسْتَغْفِرُ اللهَ العَظِيمَ الَّذِي لاَ إلَهَ إلاَّ هُوَ، الحَيُّ القَيُّومُ، وَأتُوبُ إلَيهِ.**',
-  '**‏اذكار  |  **اللَّهُمَّ إِنَّا نَعُوذُ بِكَ مِنْ أَنْ نُشْرِكَ بِكَ شَيْئًا نَعْلَمُهُ ، وَنَسْتَغْفِرُكَ لِمَا لَا نَعْلَمُهُ.',
-  '**‏اذكار  |  **اللَّهُمَّ صَلِّ وَسَلِّمْ وَبَارِكْ على نَبِيِّنَا مُحمَّد. ',
-  '**‏اذكار  |  **أَعـوذُ بِكَلِمـاتِ اللّهِ التّـامّـاتِ مِنْ شَـرِّ ما خَلَـق.',
-  '**اذكار  |  **يَا حَيُّ يَا قيُّومُ بِرَحْمَتِكَ أسْتَغِيثُ أصْلِحْ لِي شَأنِي كُلَّهُ وَلاَ تَكِلْنِي إلَى نَفْسِي طَـرْفَةَ عَيْنٍ. ',
-  '**اذكار  |  **اللّهُـمَّ إِنّـي أَعـوذُ بِكَ مِنَ الْكُـفر ، وَالفَـقْر ، وَأَعـوذُ بِكَ مِنْ عَذابِ القَـبْر ، لا إلهَ إلاّ أَنْـتَ.',
-  '**‏اذكار  |  **اللّهُـمَّ عافِـني في بَدَنـي ، اللّهُـمَّ عافِـني في سَمْـعي ، اللّهُـمَّ عافِـني في بَصَـري ، لا إلهَ إلاّ أَنْـتَ.',
-  '**‏اذكار  |  **سُبْحـانَ اللهِ وَبِحَمْـدِهِ عَدَدَ خَلْـقِه ، وَرِضـا نَفْسِـه ، وَزِنَـةَ عَـرْشِـه ، وَمِـدادَ كَلِمـاتِـه. ',
-  '**‏اذكار  |  **اللّهُـمَّ بِكَ أَصْـبَحْنا وَبِكَ أَمْسَـينا ، وَبِكَ نَحْـيا وَبِكَ نَمُـوتُ وَإِلَـيْكَ النُّـشُور.',
-  '**‏اذكار  |  **بِسـمِ اللهِ الذي لا يَضُـرُّ مَعَ اسمِـهِ شَيءٌ في الأرْضِ وَلا في السّمـاءِ وَهـوَ السّمـيعُ العَلـيم. ',
-  '**‏اذكار  |  **حَسْبِـيَ اللّهُ لا إلهَ إلاّ هُوَ عَلَـيهِ تَوَكَّـلتُ وَهُوَ رَبُّ العَرْشِ العَظـيم.',
-  '**اذكار  |  **اللّهُـمَّ ما أَصْبَـَحَ بي مِـنْ نِعْـمَةٍ أَو بِأَحَـدٍ مِـنْ خَلْـقِك ، فَمِـنْكَ وَحْـدَكَ لا شريكَ لَـك ، فَلَـكَ الْحَمْـدُ وَلَـكَ الشُّكْـر.',
-  '**‏اذكار  |  **اللّهُـمَّ إِنِّـي أَصْبَـحْتُ أُشْـهِدُك ، وَأُشْـهِدُ حَمَلَـةَ عَـرْشِـك ، وَمَلَائِكَتَكَ ، وَجَمـيعَ خَلْـقِك ، أَنَّـكَ أَنْـتَ اللهُ لا إلهَ إلاّ أَنْـتَ وَحْـدَكَ لا شَريكَ لَـك ، وَأَنَّ ُ مُحَمّـداً عَبْـدُكَ وَرَسـولُـك',
-  '**‏اذكار  |  **رَضيـتُ بِاللهِ رَبَّـاً وَبِالإسْلامِ ديـناً وَبِمُحَـمَّدٍ صلى الله عليه وسلم نَبِيّـاً',
-  '**‏اذكار  |  **اللهم إني أعوذ بك من العجز، والكسل، والجبن، والبخل، والهرم، وعذاب القبر، اللهم آت نفسي تقواها، وزكها أنت خير من زكاها. أنت وليها ومولاها. اللهم إني أعوذ بك من علم لا ينفع، ومن قلب لا يخشع، ومن نفس لا تشبع، ومن دعوة لا يستجاب لها',
-  '**‏اذكار  |  **اللهم إني أعوذ بك من شر ما عملت، ومن شر ما لم أعمل',
-  '**‏اذكار  |  **اللهم مصرف القلوب صرف قلوبنا على طاعتك',
-];
+          message.channel.send(embed);
+        }});
+
+		
 client.on('message', message => {
-  if (message.author.bot) return;
-  if (message.content.startsWith('اذكار')) {
-    if(!message.channel.guild) return;
-  var client= new Discord.RichEmbed()
-  .setTitle("اذكار")
-  .setThumbnail(message.author.avatarURL)
-  .setColor('RANDOM')
-  .setDescription(`${adkar[Math.floor(Math.random() * adkar.length)]}`)
-                 .setTimestamp()
-  message.channel.sendEmbed(client);
-  message.react("🕋")
-  }
-  });
+if (message.content.startsWith(prefix + 'help')) {
+    let pages = [' اهلا وسهلا بك يا عزيزي','السيرفر الأول','السيرفر الثاني','السيرفر الثالث','السيرفر الرابع','السيرفر الخامس','مراسلة صاحب البوت','شكرً جزيلا لكم']
+    let page = 1;
 
+    let embed = new Discord.RichEmbed()
+    .setColor('RANDOM')
+    .setFooter(`Page ${page} of ${pages.length}`)
+    .setDescription([page-1])
+	.addField('     **=-=-=-=-=-=-=** ' ,'╔[❖══════════════════════❖]╗')
+    .addField('     **=-=-=-=-=-=-=** ' ,'| A لأوامر السيرفر الأول اختر |')
+    .addField('     **=-=-=-=-=-=-=** ' ,'| B لأوامر السيرفر الثاني اختر |')
+    .addField('     **=-=-=-=-=-=-=** ' ,'| C لأوامر السيرفر الثالث احتر |')
+    .addField('     **=-=-=-=-=-=-=** ' ,'| D لأوامر السيرفر الرابع اختر |')
+    .addField('     **=-=-=-=-=-=-=** ' ,'| E لمراسلة صاحب البوت إختر |')
+
+    message.channel.sendEmbed(embed).then(msg => {
+
+        msg.react('🇦').then( r => {
+            msg.react('🇧')
+			msg.react('🇨')
+			msg.react('🇩')
+			msg.react('🇪')
+
+
+        const backwardsFilter = (reaction, user) => reaction.emoji.name === '🇦' && user.id === message.author.id;
+        const forwardsFilter = (reaction, user) => reaction.emoji.name === '🇧' && user.id === message.author.id;
+		const bokwardsFilter = (reaction, user) => reaction.emoji.name === '🇨' && user.id === message.author.id;
+		const bekwardsFilter = (reaction, user) => reaction.emoji.name === '🇩' && user.id === message.author.id;
+		const brkwardsFilter = (reaction, user) => reaction.emoji.name === '🇪' && user.id === message.author.id;
+
+
+        const backwards = msg.createReactionCollector(backwardsFilter, { time: 20000});
+        const forwards = msg.createReactionCollector(forwardsFilter, { time: 20000});
+		const bokwards = msg.createReactionCollector(bokwardsFilter, { time: 20000});
+		const bekwards = msg.createReactionCollector(bekwardsFilter, { time: 20000});
+		const brkwards = msg.createReactionCollector(brkwardsFilter, { time: 20000});
+		
+		
+		
+
+        brkwards.on('collect', r => {
+            if (page === pages.length) return;
+            page++;
+            embed.setDescription(pages[page-1]);
+            embed.setFooter(`Page ${page} of ${pages.length}`);
+			embed.addField('     **=-=-=-=-=-=-=** ' ,' ** :smiley: لم يتم بعد اضافة أوامر هذا السيرفر**')
+			embed.addField('     **=-=-=-=-=-=-=** ' ,' :smiley:  شكراً لإستعمالك البوت')
+            message.author.sendMessage(`
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-= 
+**لمراسلة صاحب البوت **
+-report
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+`);
+			msg.edit(embed)
+        })    
+		
+        bekwards.on('collect', r => {
+            if (page === pages.length) return;
+            page++;
+            embed.setDescription(pages[page-1]);
+            embed.setFooter(`Page ${page} of ${pages.length}`);
+			embed.addField('     **=-=-=-=-=-=-=** ' ,' ** :smiley: لم يتم بعد اضافة أوامر هذا السيرفر**')
+			embed.addField('     **=-=-=-=-=-=-=** ' ,' :smiley:  شكراً لإستعمالك البوت')
+            message.author.sendMessage(`
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-= 
+**قريبا سيتم اضافة اوامر هاذا لسيرفر**
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+`);
+			msg.edit(embed)
+        })    
+		
+        bokwards.on('collect', r => {
+            if (page === pages.length) return;
+            page++;
+            embed.setDescription(pages[page-1]);
+            embed.setFooter(`Page ${page} of ${pages.length}`);
+			embed.addField('     **=-=-=-=-=-=-=** ' ,' ** :smiley: لم يتم بعد اضافة أوامر هذا السيرفر**')
+			embed.addField('     **=-=-=-=-=-=-=** ' ,' :smiley:  شكراً لإستعمالك البوت')
+            message.author.sendMessage(`
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-= 
+**قريبا سيتم اضافة اوامر هاذا لسيرفر**
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+`);
+			msg.edit(embed)
+        })    
+
+
+		backwards.on('collect', r => {
+            if (page === pages.length) return;
+            page++;
+            embed.setDescription(pages[page-1]);
+            embed.setFooter(`Page ${page} of ${pages.length}`);
+			embed.addField('     **=-=-=-=-=-=-=** ' ,' ** :smiley: لم يتم بعد اضافة أوامر هذا السيرفر**')
+			embed.addField('     **=-=-=-=-=-=-=** ' ,' :smiley:  شكراً لإستعمالك البوت')
+            message.author.sendMessage(`
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-= 
+**قريبا سيتم اضافة اوامر هاذا لسيرفر**
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+`);
+			msg.edit(embed)
+        })    
+	
+        forwards.on('collect', r => {
+            if (page === pages.length) return;
+            page++;
+            embed.setDescription(pages[page-1]);
+            embed.setFooter(`Page ${page} of ${pages.length}`);
+			embed.addField('     **=-=-=-=-=-=-=** ' ,' ** :smiley: تم ارسال مساعدة السيرفر الأول**')
+			embed.addField('     **=-=-=-=-=-=-=** ' ,' :smiley:  شكراً لإستعمالك البوت - نسألك الدعاء')
+            message.author.sendMessage(`
+● ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ● 
+ 🕋اوامر بوت القران الكريم 🕋
+● ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ●
+ =-=-=-=-=-=-=-=-=-=-=-=-=-=-= 
+**
+╔[❖══════════════════════❖]╗
+============================
+سورة الفاتحة
+-quran 1
+============================
+============================
+سورة البقرة
+-quran 2
+============================
+============================
+سورة ال عمران
+-quran 3
+============================
+============================
+سورة النساء
+-quran 4
+============================
+============================
+سورة المائدة
+-quran 5
+============================
+============================
+سورة الأنعام
+-quran 6
+============================
+============================
+سورة الاعراف
+-quran 7
+============================
+============================
+سورة الأنفال
+-quran 8
+============================
+============================
+سورة التوبة
+-quran 9
+============================
+============================
+سورة يونس
+-quran 10
+============================
+============================
+سورة هود
+-quran 11
+============================
+============================
+سورة يوسف
+-quran 12
+============================
+============================
+سورة الرعد
+-quran 13
+============================
+============================
+سورة إبراهيم
+-quran 14
+============================
+============================
+سورة الحجر
+-quran 15
+============================
+============================
+سورة النحل
+-quran 16
+============================
+============================
+سورة الإسراء
+-quran 17
+============================
+============================
+سورة الكهف
+-quran 18
+============================
+============================
+سورة مريم
+-quran 19
+============================
+============================
+سورة طه
+-quran 20
+============================
+============================
+سورة الأنبياء
+-quran 21
+============================
+============================
+سورة الحج
+-quran 22
+============================
+============================
+سورة المؤمنون
+-quran 23
+============================
+============================
+سورة النور
+-quran 24
+============================
+============================
+سورة الفرقان
+-quran 25
+============================
+============================
+لتواصل مع صاحب البوت 
+!.report
+╚[❖══════════════════════❖]╝
+**
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+● ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ● 
+هاذا البوت صدقة جارية للجميع فماذا تنتظر
+قم بضم البوت غلى سيرفرك 
+
+● ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ● 
+╚[❖══════════════════════❖]╝
+**
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+`);
+			msg.edit(embed)
+        })
+        })
+    })
+    }
+});
+					      
 client.login(process.env.BOT_TOKEN);
-
