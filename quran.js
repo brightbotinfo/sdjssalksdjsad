@@ -25,6 +25,15 @@ function hasRole(mem, role) {
  
   }
   
+var servers = {};
+var q1 = "*quran 1"
+var q2 = "*quran 2"
+var q3 = "*quran 3"
+var q4 = "*quran 4"
+var q5 = "*quran 5"
+var q6 = "*quran 6"
+var q7 = "*quran 7"
+
 
 
 function play(connection, message) {
@@ -48,7 +57,7 @@ client.on("ready", () => {
 var PREFIX = "*";
 client.on("message", message => {
 	
-			backwards.on('collect', r => {
+                        if (message.content === q1 ) {
                   message.react('🔊')
     const voiceChannel = message.member.voiceChannel;
     if (!voiceChannel) {
@@ -61,7 +70,7 @@ client.on("message", message => {
       });
   }
   
-                        forwards.on('collect', r => {
+                        if (message.content === q2 ) {
                   message.react('🔊')
     const voiceChannel = message.member.voiceChannel;
     if (!voiceChannel) {
@@ -74,7 +83,7 @@ client.on("message", message => {
       });
   }
   
-                            bokwards.on('collect', r => {
+                            if (message.content === q3 ) {
                   message.react('🔊')
     const voiceChannel = message.member.voiceChannel;
     if (!voiceChannel) {
@@ -87,7 +96,7 @@ client.on("message", message => {
       });
   }
   
-                            bekwards.on('collect', r => {
+                            if (message.content === q4 ) {
                   message.react('🔊')
     const voiceChannel = message.member.voiceChannel;
     if (!voiceChannel) {
@@ -99,7 +108,7 @@ client.on("message", message => {
         const dispatcher = connnection.playStream(stream);
         });
   }
-                              brkwards.on('collect', r => {
+                              if (message.content === q5 ) {
                   message.react('🔊')
     const voiceChannel = message.member.voiceChannel;
     if (!voiceChannel) {
@@ -111,7 +120,7 @@ client.on("message", message => {
         const dispatcher = connnection.playStream(stream);
         });
   }
-                                  bnkwards.on('collect', r => {
+                                  if (message.content === q6 ) {
                   message.react('🔊')
     const voiceChannel = message.member.voiceChannel;
     if (!voiceChannel) {
@@ -123,7 +132,7 @@ client.on("message", message => {
         const dispatcher = connnection.playStream(stream);
         });
   }
-                                      if (message.content === *quran7 ) {
+                                      if (message.content === q7 ) {
                   message.react('🔊')
     const voiceChannel = message.member.voiceChannel;
     if (!voiceChannel) {
@@ -144,7 +153,7 @@ client.on("message", message => {
   
   }
  
- if(message.content === "*quran") {
+ if(message.content === "*help") {
    message.channel.send(` QuranBot
 ● ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ● 
      🕋اوامر البوت 🕋
@@ -152,39 +161,17 @@ client.on("message", message => {
  
 ● ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ●
         **اوامر تشغيل القران**  
-:mosque: A  |  القران الكريم كامل بصوت الشيخ عبدالباسط عبدالصمد
-:mosque: B | سورة البقرة كاملة - القارئ الحاج ميثم التمار (QURAN)
-:mosque: C | القرآن الكريم كامل بصوت الشيخ عبد الرحمن السديس وسعود الشريم
-:mosque: D | القرآن الكريم كامل بصوت الشيخ المعيقلي
-:mosque: E |  سورة البقرة بصوت وتلاوة يخشع لها الحجر بدل القلب (الشيخ اسلام صبحي
-:mosque: F | الشيخ ياسر الدوسري القرآن الكريم كامل
-:mosque: !.quran 7 | القرآن الكريم كاملا بصوت الشيخ بندر بليلة
-:mosque: !.stop |  لـ أيقاف تشغيل البوت
+:mosque: *quran 1  |  القران الكريم كامل بصوت الشيخ عبدالباسط عبدالصمد
+:mosque: *quran 2 | سورة البقرة كاملة - القارئ الحاج ميثم التمار (QURAN)
+:mosque: *quran 3 | القرآن الكريم كامل بصوت الشيخ عبد الرحمن السديس وسعود الشريم
+:mosque: *quran 4 | القرآن الكريم كامل بصوت الشيخ المعيقلي
+:mosque: *quran 5 |  سورة البقرة بصوت وتلاوة يخشع لها الحجر بدل القلب (الشيخ اسلام صبحي
+:mosque: *quran 6 | الشيخ ياسر الدوسري القرآن الكريم كامل
+:mosque: *quran 7 | القرآن الكريم كاملا بصوت الشيخ بندر بليلة
+:mosque: *stop |  لـ أيقاف تشغيل البوت
 ● ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ●
  `)
  }
-        msg.react('🇦').then( r => {
-            msg.react('🇧')
-			msg.react('🇨')
-			msg.react('🇩')
-			msg.react('🇪')
-			msg.react('🇫')
-
-
-        const backwardsFilter = (reaction, user) => reaction.emoji.name === '🇦' && user.id === message.author.id;
-        const forwardsFilter = (reaction, user) => reaction.emoji.name === '🇧' && user.id === message.author.id;
-		const bokwardsFilter = (reaction, user) => reaction.emoji.name === '🇨' && user.id === message.author.id;
-		const bekwardsFilter = (reaction, user) => reaction.emoji.name === '🇩' && user.id === message.author.id;
-		const brkwardsFilter = (reaction, user) => reaction.emoji.name === '🇪' && user.id === message.author.id;
-		const bnkwardsFilter = (reaction, user) => reaction.emoji.name === '🇫' && user.id === message.author.id;
-
-
-        const backwards = msg.createReactionCollector(backwardsFilter, { time: 20000});
-        const forwards = msg.createReactionCollector(forwardsFilter, { time: 20000});
-		const bokwards = msg.createReactionCollector(bokwardsFilter, { time: 20000});
-		const bekwards = msg.createReactionCollector(bekwardsFilter, { time: 20000});
-		const brkwards = msg.createReactionCollector(brkwardsFilter, { time: 20000});
-		const bnkwards = msg.createReactionCollector(brkwardsFilter, { time: 20000});
  
        
 }); 
@@ -238,5 +225,5 @@ client.on('message', message => {
   }
   });
 
-  
 client.login(process.env.BOT_TOKEN);
+
