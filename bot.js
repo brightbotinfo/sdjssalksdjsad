@@ -66,19 +66,19 @@ function hasRole(mem, role) {
 
 var servers = {};
 
-var q1 = "*quran 1"
+var q1 = "-quran 1"
  
-var q2 = "*quran 2"
+var q2 = "-quran 2"
 
-var q3 = "*quran 3"
+var q3 = "-quran 3"
  
-var q4 = "*quran 4"
+var q4 = "-quran 4"
  
-var q5 = "*quran 5"
+var q5 = "-quran 5"
  
-var q6 = "*quran 6"
+var q6 = "-quran 6"
 
-var q7 = "*quran 7"
+var q7 = "-quran 7"
 
 var q8 = "-quran 8"
 
