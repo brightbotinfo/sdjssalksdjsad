@@ -134,7 +134,7 @@ client.on("ready", () => {
     console.log(`Quran bot is in ${client.guilds.size} servers `)
 });
  
-client.on("message", message => {//الحقوق كامله محفوضه لدا سيرفر الفا
+client.on("message", message => {
                         if (message.content === q1 ) {
                   message.react('🔊')
     const voiceChannel = message.member.voiceChannel;
@@ -459,13 +459,13 @@ client.on("message", message => {//الحقوق كامله محفوضه لدا �
   
   
   
-  if(message.content === "*stop" ) {//الحقوق كامله محفوضه لدا سيرفر الفا
-                var servers = {};//الحقوق كامله محفوضه لدا سيرفر الفا
- //الحقوق كامله محفوضه لدا سيرفر الفا
+  if(message.content === "-stop" ) {
+                var servers = {};
+
             if (message.guild.voiceConnection) message.guild.voiceConnection.disconnect();//الحقوق كامله محفوضه لدا سيرفر الفا
-   //الحقوق كامله محفوضه لدا سيرفر الفا
-  }//الحقوق كامله محفوضه لدا سيرفر الفا
-//الحقوق كامله محفوضه لدا سيرفر الفا
+   
+  } 
+
  if(message.content === "the quran 123") {
    message.channel.send(` QuranBot
 شكرا لإستعمال البوت | Thanks You
